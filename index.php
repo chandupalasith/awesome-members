@@ -44,7 +44,7 @@
             <?php
             $profileCount = 0;
                 $handle = fopen("data/data.txt", "r");
-                if ($handle) {
+                if ($handle) {/* when data available*/
                     while (($line = fgets($handle)) !== false) {
 
                         $userDetails = explode(",", $line);
@@ -72,7 +72,7 @@
                             echo "</div>";
                         }
 
-                        $profileCount = $profileCount+1;
+                        $profileCount = $profileCount+1; //
                     }
                 }
 
